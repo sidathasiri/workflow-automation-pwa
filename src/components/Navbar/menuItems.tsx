@@ -4,6 +4,7 @@ import {
   HomeOutlined,
   Loading3QuartersOutlined,
   PlayCircleOutlined,
+  UserOutlined,
 } from '@ant-design/icons';
 
 const items: MenuProps['items'] = [
@@ -33,6 +34,12 @@ const items: MenuProps['items'] = [
         ],
       },
     ],
+  },
+  {
+    label: 'Profile',
+    key: 'profile',
+    icon: <UserOutlined />,
+    style: { marginLeft: 'auto' },
   },
 ];
 

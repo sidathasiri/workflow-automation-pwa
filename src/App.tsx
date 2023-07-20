@@ -4,6 +4,8 @@ import HomePage from './pages/Home';
 import InProgressWorkflowsPage from './pages/Workflows/InProgress';
 import CompletedWorkflowsPage from './pages/Workflows/Completed';
 import ErrorPage from './pages/ErrorPage';
+import './App.css';
+import ProfilePage from './pages/Profile';
 
 function App() {
   return (
@@ -18,6 +20,10 @@ function App() {
         <Route
           path='/workflows/completed'
           element={<CompletedWorkflowsPage />}
+        />
+        <Route
+          path='/profile'
+          element={<ProfilePage />}
         />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
