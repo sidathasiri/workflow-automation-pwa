@@ -1,41 +1,62 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import React, { useState } from 'react';
+import {
+  CheckOutlined,
+  HomeOutlined,
+  Loading3QuartersOutlined,
+  LoadingOutlined,
+  PlayCircleOutlined,
+} from '@ant-design/icons';
+import type { MenuProps } from 'antd';
+import { Menu } from 'antd';
+import { useNavigate } from 'react-router-dom';
 
-function NavigationBar() {
+const items: MenuProps['items'] = [
+  {
+    label: 'Home',
+    key: '',
+    icon: <HomeOutlined />,
+  },
+  {
+    label: 'Workflows',
+    key: 'SubMenu',
+    icon: <PlayCircleOutlined />,
+    children: [
+      {
+        type: 'group',
+        children: [
+          {
+            label: 'In Progress',
+            icon: <Loading3QuartersOutlined />,
+            key: 'workflows/inprogress',
+          },
+          {
+            label: 'Completed',
+            icon: <CheckOutlined />,
+            key: 'workflows/completed',
+          },
+        ],
+      },
+    ],
+  },
+];
+
+const NavigationBar: React.FC = () => {
+  const [current, setCurrent] = useState('inprogress');
+  const navigate = useNavigate();
+
+  const onClick: MenuProps['onClick'] = (e) => {
+    navigate(`/${e.key}`);
+  };
+
   return (
-    <Navbar
-      bg='dark'
-      data-bs-theme='dark'
-      collapseOnSelect
-      expand='lg'
-      className='bg-body-tertiary'
-    >
-      <Container>
-        <Navbar.Brand href='/'>Workflow Monitor</Navbar.Brand>
-        <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-        <Navbar.Collapse id='responsive-navbar-nav'>
-          <Nav className='me-auto'>
-            <NavDropdown title='Workflows' id='collasible-nav-dropdown'>
-              <NavDropdown.Item href='/workflows/inprogress'>
-                In Progress
-              </NavDropdown.Item>
-              <NavDropdown.Item href='/workflows/completed'>
-                Completed
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Nav>
-            <Nav.Link href='#faq'>FAQ</Nav.Link>
-            <Nav.Link eventKey={2} href='#profile'>
-              Profile
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <Menu
+      theme='dark'
+      onClick={onClick}
+      selectedKeys={[current]}
+      mode='horizontal'
+      items={items}
+    />
   );
-}
+};
 
 export default NavigationBar;

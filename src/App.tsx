@@ -1,4 +1,9 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import {
+  createBrowserRouter,
+  Route,
+  RouterProvider,
+  Routes,
+} from 'react-router-dom';
 import NavigationBar from './components/Navbar';
 import HomePage from './pages/Home';
 import InProgressWorkflowsPage from './pages/Workflows/InProgress';
@@ -25,7 +30,18 @@ function App() {
   return (
     <div className='App'>
       <NavigationBar />
-      <RouterProvider router={router} />
+      <Routes>
+        <Route path='/' element={<HomePage />} />
+        <Route
+          path='/workflows/inprogress'
+          element={<InProgressWorkflowsPage />}
+        />
+        <Route
+          path='/workflows/completed'
+          element={<CompletedWorkflowsPage />}
+        />
+        <Route path='*' element={<ErrorPage />} />
+      </Routes>
     </div>
   );
 }
