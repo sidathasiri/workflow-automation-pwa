@@ -18,6 +18,11 @@ function InProgressWorkflowsPage() {
             label: 'Workflow 2',
             children: <Workflow />,
           },
+          {
+            key: '3',
+            label: 'Workflow 3',
+            children: <Workflow />,
+          },
         ]}
       />
     </div>
