@@ -1,26 +1,59 @@
-import React from 'react';
-import { Steps } from 'antd';
+import React, { useState } from 'react';
+import { Divider, Steps } from 'antd';
 
-const description = 'This is a description.';
-const Workflow: React.FC = () => (
-  <Steps
-    current={1}
-    items={[
-      {
-        title: 'Finished',
-        description,
-      },
-      {
-        title: 'In Progress',
-        description,
-        subTitle: 'Left 00:00:08',
-      },
-      {
-        title: 'Waiting',
-        description,
-      },
-    ]}
-  />
-);
+const Workflow: React.FC = () => {
+  const [current, setCurrent] = useState(0);
+
+  const onChange = (value: number) => {
+    console.log('onChange:', value);
+    setCurrent(value);
+  };
+  const description = 'This is a description.';
+
+  return (
+    <>
+      <Steps
+        current={current}
+        onChange={onChange}
+        items={[
+          {
+            title: 'Step 1',
+            description,
+          },
+          {
+            title: 'Step 2',
+            description,
+          },
+          {
+            title: 'Step 3',
+            description,
+          },
+        ]}
+      />
+
+      <Divider />
+
+      <Steps
+        current={current}
+        onChange={onChange}
+        direction='vertical'
+        items={[
+          {
+            title: 'Step 1',
+            description,
+          },
+          {
+            title: 'Step 2',
+            description,
+          },
+          {
+            title: 'Step 3',
+            description,
+          },
+        ]}
+      />
+    </>
+  );
+};
 
 export default Workflow;
