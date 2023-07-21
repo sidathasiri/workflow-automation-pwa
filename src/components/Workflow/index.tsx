@@ -1,62 +1,27 @@
 import React, { useState } from 'react';
-import { Card, Col, Divider, Row, Steps } from 'antd';
+import { Divider } from 'antd';
+import WorkflowSteps from '../WorkflowSteps';
+import StepDetails from '../StepDetails';
 
-const Workflow: React.FC = () => {
+const Workflow = ({ steps }: { steps: any[] }) => {
   const [current, setCurrent] = useState(0);
 
   const onChange = (value: number) => {
-    console.log('onChange:', value);
     setCurrent(value);
   };
-  const description = 'This is a description.';
+
+  const items = steps.map((step) => ({
+    title: step.title,
+    description: step.description,
+  }));
 
   return (
     <>
-      <Steps
-        current={current}
-        onChange={onChange}
-        items={[
-          {
-            title: 'Step 1',
-            description,
-          },
-          {
-            title: 'Step 2',
-            description,
-          },
-          {
-            title: 'Step 3',
-            description,
-          },
-        ]}
-      />
+      <WorkflowSteps items={items} current={current} onChange={onChange} />
 
       <Divider />
 
-      <Row
-        style={{
-          justifyContent: 'center',
-        }}
-      >
-        <Col
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flex: 1,
-          }}
-        >
-          <Card
-            title={`Step ${current + 1}`}
-            extra={<a href='#'>Link</a>}
-            style={{ width: 600 }}
-          >
-            <p>content</p>
-            <p>content</p>
-            <p>content</p>
-          </Card>
-        </Col>
-      </Row>
+      <StepDetails stepData={steps[current]} />
     </>
   );
 };

@@ -1,5 +1,6 @@
 import { Collapse } from 'antd';
 import Workflow from '../../../components/Workflow';
+import CreateBusinessCards from '../../../templates/CreateBusinessCards.json';
 
 function CompletedWorkflowsPage() {
   return (
@@ -11,12 +12,7 @@ function CompletedWorkflowsPage() {
           {
             key: '1',
             label: 'Workflow 1',
-            children: <Workflow />,
-          },
-          {
-            key: '2',
-            label: 'Workflow 2',
-            children: <Workflow />,
+            children: <Workflow steps={CreateBusinessCards.steps} />,
           },
         ]}
       />

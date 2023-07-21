@@ -1,0 +1,42 @@
+{
+  "title": "Create Business Card",
+  "description": "Workflow of creating a business card for employees",
+  "status": "In Progress",
+  "steps": [
+    {
+      "title": "Collect Data",
+      "description": "Collecting information on person",
+      "status": "Completed",
+      "started": "01/05/2023",
+      "completed": "02/05/2023"
+    },
+    {
+      "title": "Create Design",
+      "description": "Creating the design for card",
+      "status": "Completed",
+      "started": "03/05/2023",
+      "completed": "05/05/2023"
+    },
+    {
+      "title": "Proof Read",
+      "description": "Proof read the information",
+      "status": "In progress",
+      "started": "03/05/2023",
+      "completed": null
+    },
+    {
+      "title": "Print",
+      "description": "Print the cards",
+      "status": "Not started",
+      "started": null,
+      "completed": null
+    },
+    {
+      "title": "Distribute",
+      "description": "Distribute the cards",
+      "status": "Not started",
+      "started": null,
+      "completed": null
+    }
+  ]
+}
