@@ -1,39 +1,40 @@
-import { Card, Col, Row } from 'antd';
+import { Card, Col, List, Row } from 'antd';
 
 const StepDetails = ({ stepData }: { stepData: any }) => {
   const keys = Object.keys(stepData);
-  const displayItems = keys.map((key) => (
-    <li key={key}>
-      <span style={{ fontWeight: 'bold' }}>{key.toUpperCase()}:</span>{' '}
-      {stepData[key]}
-    </li>
-  ));
 
   return (
-    <>
-      <Row
+    <Row
+      style={{
+        justifyContent: 'center',
+      }}
+    >
+      <Col
         style={{
+          display: 'flex',
+          alignItems: 'center',
           justifyContent: 'center',
+          flex: 1,
         }}
       >
-        <Col
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            flex: 1,
-          }}
+        <Card
+          title={stepData.title}
+          extra={`Status: ${stepData.status}`}
+          style={{ width: 600 }}
         >
-          <Card
-            title={stepData.title}
-            extra={`Status: ${stepData.status}`}
-            style={{ width: 600 }}
-          >
-            <ul>{displayItems}</ul>
-          </Card>
-        </Col>
-      </Row>
-    </>
+          <List
+            size='small'
+            dataSource={keys}
+            renderItem={(key) => (
+              <List.Item>
+                <span style={{ fontWeight: 'bold' }}>{key.toUpperCase()}:</span>
+                {stepData[key]}
+              </List.Item>
+            )}
+          />
+        </Card>
+      </Col>
+    </Row>
   );
 };
 

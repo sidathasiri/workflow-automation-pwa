@@ -9,11 +9,7 @@ const WorkflowSteps = ({
   current: number;
   onChange: any;
 }) => {
-  return (
-    <>
-      <Steps current={current} onChange={onChange} items={items} />
-    </>
-  );
+  return <Steps current={current} onChange={onChange} items={items} />;
 };
 
 export default WorkflowSteps;

@@ -7,7 +7,7 @@ import { IWorkflow } from '../../../interfaces/workflow';
 function InProgressWorkflowsPage() {
   const fetchedData: IWorkflow[] = [Onboarding, CreateBusinessCards];
   const items = fetchedData.map((workflow) => ({
-    key: workflow.description,
+    key: workflow.id,
     label: workflow.title,
     children: <Workflow steps={workflow.steps} />,
   }));
