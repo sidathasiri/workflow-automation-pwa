@@ -1,10 +1,11 @@
 import { Collapse } from 'antd';
 import Workflow from '../../../components/Workflow';
 import CreateBusinessCards from '../../../mockData/inprogress/CreateBusinessCards.json';
+import Onboarding from '../../../mockData/inprogress/Onboarding.json';
 import { IWorkflow } from '../../../interfaces/workflow';
 
 function InProgressWorkflowsPage() {
-  const fetchedData: IWorkflow[] = [CreateBusinessCards];
+  const fetchedData: IWorkflow[] = [Onboarding, CreateBusinessCards];
   const items = fetchedData.map((workflow) => ({
     key: workflow.description,
     label: workflow.title,

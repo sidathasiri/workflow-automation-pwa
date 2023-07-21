@@ -1,0 +1,40 @@
+{
+  "id": "9da58807-0ca8-44f2-a719-1766db70754f",
+  "title": "Onboarding",
+  "description": "Onboarding new employees",
+  "status": "process",
+  "steps": [
+    {
+      "id": "1f827162-db89-4cef-9aae-12d548e1f5cb",
+      "title": "Send Welcome Pack",
+      "description": "Send the welcome pack to the employee",
+      "status": "finish",
+      "started": "01/05/2023",
+      "completed": "02/05/2023"
+    },
+    {
+      "id": "0886b77b-2c35-4e97-8942-5d0d6a1473dc",
+      "title": "Onboarding Session",
+      "description": "Conduct the onboarding session ",
+      "status": "finish",
+      "started": "03/05/2023",
+      "completed": "05/05/2023"
+    },
+    {
+      "id": "c2687463-11db-4ec4-b8b0-c7b9e61b8091",
+      "title": "Complete Documentation",
+      "description": "Complete all the necessary documentations",
+      "status": "process",
+      "started": "03/05/2023",
+      "completed": null
+    },
+    {
+      "id": "f6254ef2-dd21-4798-bc3b-dbf578a9dea9",
+      "title": "Team Introduction",
+      "description": "Introduce to the team",
+      "status": "wait",
+      "started": null,
+      "completed": null
+    }
+  ]
+}
