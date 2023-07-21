@@ -25,7 +25,7 @@ const StepDetails = ({ stepData }: { stepData: any }) => {
         >
           <Card
             title={stepData.title}
-            extra={stepData.status}
+            extra={`Status: ${stepData.status}`}
             style={{ width: 600 }}
           >
             <ul>{displayItems}</ul>

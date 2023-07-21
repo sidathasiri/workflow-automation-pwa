@@ -1,0 +1,48 @@
+{
+  "id": "61539737-3f0b-4b85-a61f-3c10c0c0df5f",
+  "title": "Recruitment",
+  "description": "Workflow of recruiting an employee",
+  "status": "complete",
+  "steps": [
+    {
+      "id": "80937408-cc93-45b0-b724-6348eab94fae",
+      "title": "Review CV",
+      "description": "Go through the CV",
+      "status": "finish",
+      "started": "01/05/2023",
+      "completed": "02/05/2023"
+    },
+    {
+      "id": "573f11f8-5a16-4eca-857d-d8cb76680f4c",
+      "title": "Setup Interview",
+      "description": "Interviewing the employee",
+      "status": "finish",
+      "started": "03/05/2023",
+      "completed": "05/05/2023"
+    },
+    {
+      "id": "fbe17272-7e93-40cc-b6f7-ce11c8756448",
+      "title": "Collect Feedback",
+      "description": "Collect feedback after the interview",
+      "status": "finish",
+      "started": "03/05/2023",
+      "completed": "04/05/2023"
+    },
+    {
+      "id": "7cbe24d2-9593-45ec-b131-b1717bd4ece9",
+      "title": "Finalyze",
+      "description": "Finalyze the decision",
+      "status": "finish",
+      "started": "05/05/2023",
+      "completed": "06/05/2023"
+    },
+    {
+      "id": "c0e90467-99bd-4a46-a557-52ef559954df",
+      "title": "Inform",
+      "description": "Inform the decision to HR",
+      "status": "finish",
+      "started": "07/05/2023",
+      "completed": "08/05/2023"
+    }
+  ]
+}

@@ -1,28 +1,20 @@
 import { Collapse } from 'antd';
 import Workflow from '../../../components/Workflow';
-import CreateBusinessCards from '../../../templates/CreateBusinessCards.json';
+import CreateBusinessCards from '../../../mockData/inprogress/CreateBusinessCards.json';
+import { IWorkflow } from '../../../interfaces/workflow';
 
 function InProgressWorkflowsPage() {
-  console.log(CreateBusinessCards);
+  const fetchedData: IWorkflow[] = [CreateBusinessCards];
+  const items = fetchedData.map((workflow) => ({
+    key: workflow.description,
+    label: workflow.title,
+    children: <Workflow steps={workflow.steps} />,
+  }));
 
   return (
     <div>
       <h1>In Progress Workflows</h1>
-      <Collapse
-        accordion
-        items={[
-          {
-            key: '1',
-            label: 'Workflow 1',
-            children: <Workflow steps={CreateBusinessCards.steps} />,
-          },
-          {
-            key: '2',
-            label: 'Workflow 2',
-            children: <Workflow steps={CreateBusinessCards.steps} />,
-          },
-        ]}
-      />
+      <Collapse accordion items={items} />
     </div>
   );
 }

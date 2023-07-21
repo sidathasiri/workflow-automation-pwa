@@ -1,9 +1,11 @@
 {
+  "id": "a1ad32a0-be66-4116-887b-061d903e8723",
   "title": "Create Business Card",
   "description": "Workflow of creating a business card for employees",
-  "status": "In Progress",
+  "status": "process",
   "steps": [
     {
+      "id": "d2053e30-5457-4a55-b022-a2ce477641a3",
       "title": "Collect Data",
       "description": "Collecting information on person",
       "status": "finish",
@@ -11,6 +13,7 @@
       "completed": "02/05/2023"
     },
     {
+      "id": "2a9ea4b2-dc8e-438c-8c8e-842cc5dfe949",
       "title": "Create Design",
       "description": "Creating the design for card",
       "status": "finish",
@@ -18,6 +21,7 @@
       "completed": "05/05/2023"
     },
     {
+      "id": "76c5ee0d-d23a-4426-af3c-2446f5be4e0d",
       "title": "Proof Read",
       "description": "Proof read the information",
       "status": "process",
@@ -25,13 +29,15 @@
       "completed": null
     },
     {
+      "id": "09db7bfb-b01a-4561-bf84-aa57c3b32294",
       "title": "Print",
       "description": "Print the cards",
-      "status": "wait",
+      "status": "error",
       "started": null,
       "completed": null
     },
     {
+      "id": "48fee5b4-f24e-41b2-b12c-80d1373d01ee",
       "title": "Distribute",
       "description": "Distribute the cards",
       "status": "wait",
