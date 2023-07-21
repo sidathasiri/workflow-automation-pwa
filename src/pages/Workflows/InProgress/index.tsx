@@ -2,7 +2,7 @@ import { Collapse } from 'antd';
 import Workflow from '../../../components/Workflow';
 import CreateBusinessCards from '../../../mockData/inprogress/CreateBusinessCards.json';
 import Onboarding from '../../../mockData/inprogress/Onboarding.json';
-import { IWorkflow } from '../../../interfaces/workflow';
+import { IWorkflow } from '../../../interfaces/IWorkflow';
 
 function InProgressWorkflowsPage() {
   const fetchedData: IWorkflow[] = [Onboarding, CreateBusinessCards];

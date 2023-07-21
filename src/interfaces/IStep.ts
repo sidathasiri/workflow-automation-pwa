@@ -1,4 +1,5 @@
 export interface IStep {
+  [key: string]: string | null;
   id: string;
   title: string;
   description: string;

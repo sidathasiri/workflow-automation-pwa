@@ -1,7 +1,7 @@
 import { Collapse } from 'antd';
 import Workflow from '../../../components/Workflow';
 import Recruitment from '../../../mockData/complete/Recruitment.json';
-import { IWorkflow } from '../../../interfaces/workflow';
+import { IWorkflow } from '../../../interfaces/IWorkflow';
 
 function CompletedWorkflowsPage() {
   const fetchedData: IWorkflow[] = [Recruitment];

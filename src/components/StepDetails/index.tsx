@@ -1,7 +1,8 @@
 import { Card, Col, List, Row } from 'antd';
+import { IStep } from '../../interfaces';
 
-const StepDetails = ({ stepData }: { stepData: any }) => {
-  const keys = Object.keys(stepData);
+const StepDetails = ({ stepData }: { stepData: IStep }) => {
+  const keys: string[] = Object.keys(stepData);
 
   return (
     <Row

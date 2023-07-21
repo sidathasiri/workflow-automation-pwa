@@ -1,11 +1,11 @@
-import { Steps } from 'antd';
+import { StepProps, Steps } from 'antd';
 
 const WorkflowSteps = ({
   items,
   current,
   onChange,
 }: {
-  items: any[];
+  items: StepProps[];
   current: number;
   onChange: any;
 }) => {

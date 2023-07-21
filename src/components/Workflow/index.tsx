@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { Divider } from 'antd';
+import { Divider, StepProps } from 'antd';
 import WorkflowSteps from '../WorkflowSteps';
 import StepDetails from '../StepDetails';
+import { IStep } from '../../interfaces';
 
-const Workflow = ({ steps }: { steps: any[] }) => {
+const Workflow = ({ steps }: { steps: IStep[] }) => {
   const [current, setCurrent] = useState(0);
 
   const onChange = (value: number) => {
@@ -18,7 +19,11 @@ const Workflow = ({ steps }: { steps: any[] }) => {
 
   return (
     <>
-      <WorkflowSteps items={items} current={current} onChange={onChange} />
+      <WorkflowSteps
+        items={items as StepProps[]}
+        current={current}
+        onChange={onChange}
+      />
       <Divider />
       <StepDetails stepData={steps[current]} />
     </>

@@ -1,4 +1,4 @@
-import { IStep } from './step';
+import { IStep } from './IStep';
 
 export interface IWorkflow {
   id: string;
