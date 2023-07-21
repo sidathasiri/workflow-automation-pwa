@@ -19,9 +19,7 @@ const Workflow = ({ steps }: { steps: any[] }) => {
   return (
     <>
       <WorkflowSteps items={items} current={current} onChange={onChange} />
-
       <Divider />
-
       <StepDetails stepData={steps[current]} />
     </>
   );

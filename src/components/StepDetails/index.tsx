@@ -3,11 +3,12 @@ import { Card, Col, Row } from 'antd';
 const StepDetails = ({ stepData }: { stepData: any }) => {
   const keys = Object.keys(stepData);
   const displayItems = keys.map((key) => (
-    <li>
+    <li key={key}>
       <span style={{ fontWeight: 'bold' }}>{key.toUpperCase()}:</span>{' '}
       {stepData[key]}
     </li>
   ));
+
   return (
     <>
       <Row
