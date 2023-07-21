@@ -6,35 +6,35 @@
     {
       "title": "Collect Data",
       "description": "Collecting information on person",
-      "status": "Completed",
+      "status": "finish",
       "started": "01/05/2023",
       "completed": "02/05/2023"
     },
     {
       "title": "Create Design",
       "description": "Creating the design for card",
-      "status": "Completed",
+      "status": "finish",
       "started": "03/05/2023",
       "completed": "05/05/2023"
     },
     {
       "title": "Proof Read",
       "description": "Proof read the information",
-      "status": "In progress",
+      "status": "process",
       "started": "03/05/2023",
       "completed": null
     },
     {
       "title": "Print",
       "description": "Print the cards",
-      "status": "Not started",
+      "status": "wait",
       "started": null,
       "completed": null
     },
     {
       "title": "Distribute",
       "description": "Distribute the cards",
-      "status": "Not started",
+      "status": "wait",
       "started": null,
       "completed": null
     }

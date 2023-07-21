@@ -13,6 +13,7 @@ const Workflow = ({ steps }: { steps: any[] }) => {
   const items = steps.map((step) => ({
     title: step.title,
     description: step.description,
+    status: step.status,
   }));
 
   return (
